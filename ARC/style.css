@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f6f6f6;
+  font-family: "Prompt", sans-serif;
+  overflow-x: hidden;
+}
+footer {
+  text-align: center;
+  margin: 4em auto;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed #333;
+  color: #333;
+  margin: 5px;
+}
+footer a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+footer a .icons {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.form-banner {
+  margin-top: 10px !important;
+}
+
+.form-banner .img img
+{
+    margin: 3%;
+}
+
+@media (max-width: 400px) {
+  .form-banner .img img {
+    width: 320px !important;
+  }
+}
+.form-banner h5 {
+  font-size: 16px;
+}
+
+.banner-text {
+  font-size: 14px;
+  text-align: left;
+}
+
+.main-content {
+  margin: 4em auto;
+  max-width: 900px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  transition: all 0.1s ease-in-out;
+}
+.id__wrapper {
+  display: grid;
+  width: 100%;
+  transition: width 0.2s ease-in-out;
+  margin: auto;
+  grid-gap: 15px;
+  padding: 15px;
+  background: rgba(76, 162, 205, 0.2);
+  border: 2px solid;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto); */
+  /* grid-template-areas: "your-face name name" "your-face job country" "your-face twitter codepen" "your-face blood blood"; */
+}
+
+@media (min-width: 900px) {
+  .id__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "name name" "email phone" "course Rollno" "year college";
+  }
+
+  .name {
+    grid-area: name;
+  }
+  .email {
+    grid-area: email;
+  }
+  .college {
+    grid-area: college;
+  }
+  .phone {
+    grid-area: phone;
+  }
+  .Rollno {
+    grid-area: Rollno;
+  }
+  .year {
+    grid-area: year;
+  }
+  .course {
+    grid-area: course;
+  }
+}
+
+.id__wrapper > div {
+  transition: all 0.1s ease;
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}
+.header {
+  grid-area: header;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+  font: 600 28px "Prompt";
+}
+.header span:nth-child(2) {
+  display: none;
+}
+label {
+  font: 600 16px "Prompt";
+  margin-bottom: 2px;
+  display: block;
+  flex: 0 0 auto;
+}
+input.full,
+textarea.full {
+  font: 400 20px "Prompt";
+  border: none;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  border-bottom: 2px solid;
+  resize: none;
+  overflow: visible;
+  line-height: 1;
+}
+input.full:focus,
+textarea.full:focus {
+  outline: none;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkbox__wrapper .checkbox {
+  flex: 0 0 auto;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+}
+.checkbox__wrapper input {
+  visibility: hidden;
+}
+.checkbox__wrapper label {
+  position: relative;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.checkbox__wrapper label:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border: 2px solid;
+  left: -20px;
+  top: 2px;
+}
+.checkbox__wrapper input:checked + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background: #000;
+  left: -16px;
+  top: 6px;
+}
